@@ -1,0 +1,23 @@
+Dependencies for Project 'stm32f407lib', Target 'Target 1': (DO NOT MODIFY !)
+F (..\user\main.c)(0x5CD2E290)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\user -I ..\applib -I ..\hardwarelib -I ..\hardwarelib\cmsis-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F407xx -DSTM32F407xx-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (..\applib\base_com.h)(0x5CD2E269)
+I (D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5A8F9364)
+I (D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x5A8F9364)
+I (..\hardwarelib\cmsis\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\hardwarelib\cmsis\cmsis_compiler.h)(0x5898498A)
+I (..\hardwarelib\cmsis\cmsis_armcc.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5A8F9364)
+F (..\applib\base_com.c)(0x5CD2E23B)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\user -I ..\applib -I ..\hardwarelib -I ..\hardwarelib\cmsis-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F407xx -DSTM32F407xx-o .\objects\base_com.o --omf_browse .\objects\base_com.crf --depend .\objects\base_com.d)
+I (..\applib\base_com.h)(0x5CD2E269)
+I (D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x5A8F9364)
+I (D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x5A8F9364)
+I (..\hardwarelib\cmsis\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\hardwarelib\cmsis\cmsis_compiler.h)(0x5898498A)
+I (..\hardwarelib\cmsis\cmsis_armcc.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x5A8F9364)
+F (..\hardwarelib\device\startup\startup_stm32f407xx.s)(0x5A8F9364)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 523" --pd "STM32F407xx SETA 1"--list .\listings\startup_stm32f407xx.lst --xref -o .\objects\startup_stm32f407xx.o --depend .\objects\startup_stm32f407xx.d)
+F (..\hardwarelib\gpio.c)(0x5CD2E0C9)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\user -I ..\applib -I ..\hardwarelib -I ..\hardwarelib\cmsis-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F407xx -DSTM32F407xx-o .\objects\gpio.o --omf_browse .\objects\gpio.crf --depend .\objects\gpio.d)
+F (..\hardwarelib\rcc.c)(0x5CD2E0C9)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\user -I ..\applib -I ..\hardwarelib -I ..\hardwarelib\cmsis-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F407xx -DSTM32F407xx-o .\objects\rcc.o --omf_browse .\objects\rcc.crf --depend .\objects\rcc.d)
+F (..\hardwarelib\usart.c)(0x5CD2E0C9)(--c99 -c --cpu Cortex-M4.fp -g -O0 --apcs=interwork --split_sections -I ..\user -I ..\applib -I ..\hardwarelib -I ..\hardwarelib\cmsis-I.\RTE\_Target_1-ID:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-ID:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="523" -DSTM32F407xx -DSTM32F407xx-o .\objects\usart.o --omf_browse .\objects\usart.crf --depend .\objects\usart.d)
