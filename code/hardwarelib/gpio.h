@@ -1,7 +1,7 @@
 #ifndef __GPIO_H__
 #define	__GPIO_H__
 
-#include "stm32f4xx.h"                  // Device header
+#include "common.h"
 
 //pin_cfg Bitmap
 /*
@@ -38,7 +38,7 @@ pin_cfg:
 
 /*
 **************************************************
-*FunctionName:	void GPIO_Init(GPIO_TypeDef* port,uint8_t pin_index,uint16_t pin_cfg)
+*FunctionName:	void GPIO_Init(GPIO_TypeDef* port,u8 pin_index,u16 pin_cfg)
 *
 *Descriptor:	初始化指定引脚
 *
@@ -51,11 +51,11 @@ pin_cfg:
 *Attentions:	无
 **************************************************
 */
-void GPIO_Init(GPIO_TypeDef* port,uint8_t pin_index,uint16_t pin_cfg);
+void GPIO_Init(GPIO_TypeDef* port,u8 pin_index,u16 pin_cfg);
 
 /*
 **************************************************
-*FunctionName:	void GPIO_MultiInit(GPIO_TypeDef* port,uint16_t pin_map,uint16_t pin_cfg)
+*FunctionName:	void GPIO_MultiInit(GPIO_TypeDef* port,u16 pin_map,u16 pin_cfg)
 *
 *Descriptor:	同一端口多个引脚初始化为同一配置
 *
@@ -68,11 +68,11 @@ void GPIO_Init(GPIO_TypeDef* port,uint8_t pin_index,uint16_t pin_cfg);
 *Attentions:	无
 **************************************************
 */
-void GPIO_MultiInit(GPIO_TypeDef* port,uint16_t pin_map,uint16_t pin_cfg);
+void GPIO_MultiInit(GPIO_TypeDef* port,u16 pin_map,u16 pin_cfg);
 
 /*
 **************************************************
-*FunctionName:	宏函数@void GPIO_WritePort(GPIO_TypeDef* port,uint32_t value)
+*FunctionName:	宏函数@void GPIO_WritePort(GPIO_TypeDef* port,u32 value)
 *
 *Descriptor:	写整个端口的值
 *
@@ -88,7 +88,7 @@ void GPIO_MultiInit(GPIO_TypeDef* port,uint16_t pin_map,uint16_t pin_cfg);
 
 /*
 **************************************************
-*FunctionName:	宏函数@uint32_t GPIO_ReadPort(GPIO_TypeDef* port)
+*FunctionName:	宏函数@u32 GPIO_ReadPort(GPIO_TypeDef* port)
 *
 *Descriptor:	 读整个端口的值
 *
@@ -103,7 +103,7 @@ void GPIO_MultiInit(GPIO_TypeDef* port,uint16_t pin_map,uint16_t pin_cfg);
 
 /*
 **************************************************
-*FunctionName:	宏函数@void GPIO_WriteBit(GPIO_TypeDef* port,uint8_t pin_index,uint8_t value)
+*FunctionName:	宏函数@void GPIO_WriteBit(GPIO_TypeDef* port,u8 pin_index,u8 value)
 *
 *Descriptor:	写指定引脚
 *
@@ -120,7 +120,7 @@ void GPIO_MultiInit(GPIO_TypeDef* port,uint16_t pin_map,uint16_t pin_cfg);
 
 /*
 **************************************************
-*FunctionName:	宏函数@uint8_t GPIO_ReadBit(GPIO_TypeDef* port,uint8_t pin_index)
+*FunctionName:	宏函数@u8 GPIO_ReadBit(GPIO_TypeDef* port,u8 pin_index)
 *
 *Descriptor:	读指定引脚
 *
@@ -136,7 +136,7 @@ void GPIO_MultiInit(GPIO_TypeDef* port,uint16_t pin_map,uint16_t pin_cfg);
 
 /*
 **************************************************
-*FunctionName:	宏函数@void GPIO_SetBit(GPIO_TypeDef* port,uint8_t pin_index)
+*FunctionName:	宏函数@void GPIO_SetBit(GPIO_TypeDef* port,u8 pin_index)
 *
 *Descriptor:	将指定引脚置位
 *
@@ -152,7 +152,7 @@ void GPIO_MultiInit(GPIO_TypeDef* port,uint16_t pin_map,uint16_t pin_cfg);
 
 /*
 **************************************************
-*FunctionName:	宏函数@void GPIO_ResetBit(GPIO_TypeDef* port,uint8_t pin_index)
+*FunctionName:	宏函数@void GPIO_ResetBit(GPIO_TypeDef* port,u8 pin_index)
 *
 *Descriptor:	将指定引脚清零
 *
@@ -168,7 +168,7 @@ void GPIO_MultiInit(GPIO_TypeDef* port,uint16_t pin_map,uint16_t pin_cfg);
 
 /*
 **************************************************
-*FunctionName:	宏函数@void GPIO_ToggleBit(GPIO_TypeDef* port,uint8_t pin_index)
+*FunctionName:	宏函数@void GPIO_ToggleBit(GPIO_TypeDef* port,u8 pin_index)
 *
 *Descriptor:	写整个端口的值
 *

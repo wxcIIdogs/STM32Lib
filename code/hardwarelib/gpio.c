@@ -1,6 +1,6 @@
 #include "gpio.h"
 
-static const uint32_t MaskTable_2Bit[16] = 
+static const u32 MaskTable_2Bit[16] = 
 {
 	~(3UL<<0),	~(3UL<<2),	~(3UL<<4),	~(3UL<<6),
 	~(3UL<<8),	~(3UL<<10),	~(3UL<<12),	~(3UL<<14),
@@ -10,7 +10,7 @@ static const uint32_t MaskTable_2Bit[16] =
 
 /*
 **************************************************
-*FunctionName:	void GPIO_Init(GPIO_TypeDef* port,uint8_t pin_index,uint16_t pin_cfg)
+*FunctionName:	void GPIO_Init(GPIO_TypeDef* port,u8 pin_index,u16 pin_cfg)
 *
 *Descriptor:	初始化指定引脚
 *
@@ -23,13 +23,13 @@ static const uint32_t MaskTable_2Bit[16] =
 *Attentions:	无
 **************************************************
 */
-void GPIO_Init(GPIO_TypeDef* port,uint8_t pin_index,uint16_t pin_cfg)
+void GPIO_Init(GPIO_TypeDef* port,u8 pin_index,u16 pin_cfg)
 {
 	if(pin_index > 15)
 	{
 		return;
 	}
-	switch((uint32_t)port)
+	switch((u32)port)
 	{
 		case GPIOA_BASE:
 		{
@@ -89,23 +89,23 @@ void GPIO_Init(GPIO_TypeDef* port,uint8_t pin_index,uint16_t pin_cfg)
 		}break;
 		default:return;
 	}
-	port->MODER = 	(port->MODER & MaskTable_2Bit[pin_index]) 	| ((uint32_t)((pin_cfg>>0) & 0x0003) << (pin_index*2));
-	port->PUPDR = 	(port->PUPDR & MaskTable_2Bit[pin_index]) 	| ((uint32_t)((pin_cfg>>2) & 0x0003) << (pin_index*2));
-	port->OSPEEDR =	(port->OSPEEDR & MaskTable_2Bit[pin_index]) | ((uint32_t)((pin_cfg>>4) & 0x0003) << (pin_index*2));
-	port->OTYPER = 	(port->OTYPER & (~(1<<pin_cfg))) 			| ((uint32_t)((pin_cfg>>6) & 0x0001) << pin_index);
+	port->MODER = 	(port->MODER & MaskTable_2Bit[pin_index]) 	| ((u32)((pin_cfg>>0) & 0x0003) << (pin_index*2));
+	port->PUPDR = 	(port->PUPDR & MaskTable_2Bit[pin_index]) 	| ((u32)((pin_cfg>>2) & 0x0003) << (pin_index*2));
+	port->OSPEEDR =	(port->OSPEEDR & MaskTable_2Bit[pin_index]) | ((u32)((pin_cfg>>4) & 0x0003) << (pin_index*2));
+	port->OTYPER = 	(port->OTYPER & (~(1<<pin_cfg))) 			| ((u32)((pin_cfg>>6) & 0x0001) << pin_index);
 	if(pin_index < 8)
 	{
-		port->AFR[0] = (port->AFR[0] & (~(0x0FUL << (pin_index*4)))) | ((uint32_t)((pin_cfg>>8) & 0x000F) << (pin_index*4));
+		port->AFR[0] = (port->AFR[0] & (~(0x0FUL << (pin_index*4)))) | ((u32)((pin_cfg>>8) & 0x000F) << (pin_index*4));
 	}
 	else
 	{
-		port->AFR[1] = (port->AFR[1] & (~(0x0FUL << (pin_index*4-32)))) | ((uint32_t)((pin_cfg>>8) & 0x000F) << (pin_index*4-32));
+		port->AFR[1] = (port->AFR[1] & (~(0x0FUL << (pin_index*4-32)))) | ((u32)((pin_cfg>>8) & 0x000F) << (pin_index*4-32));
 	}
 }
 
 /*
 **************************************************
-*FunctionName:	void GPIO_MultiInit(GPIO_TypeDef* port,uint16_t pin_map,uint16_t pin_cfg)
+*FunctionName:	void GPIO_MultiInit(GPIO_TypeDef* port,u16 pin_map,u16 pin_cfg)
 *
 *Descriptor:	同一端口多个引脚初始化为同一配置
 *
@@ -118,9 +118,9 @@ void GPIO_Init(GPIO_TypeDef* port,uint8_t pin_index,uint16_t pin_cfg)
 *Attentions:	无
 **************************************************
 */
-void GPIO_MultiInit(GPIO_TypeDef* port,uint16_t pin_map,uint16_t pin_cfg)
+void GPIO_MultiInit(GPIO_TypeDef* port,u16 pin_map,u16 pin_cfg)
 {
-	for(uint8_t i=0;i<16;i++)
+	for(u8 i=0;i<16;i++)
 	{
 		if(pin_map & (1<<i))
 		{
