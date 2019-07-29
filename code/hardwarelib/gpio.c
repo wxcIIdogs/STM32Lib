@@ -59,6 +59,13 @@ void GPIO_Init(GPIO_TypeDef* port,u8 pin_index,u16 pin_cfg)
 				RCC->AHB1ENR |= RCC_AHB1ENR_GPIODEN;
 			}
 		}break;
+		case GPIOE_BASE:
+		{
+			if((RCC->AHB1ENR & RCC_AHB1ENR_GPIOFEN) == 0)
+			{
+				RCC->AHB1ENR |= RCC_AHB1ENR_GPIOFEN;
+			}
+		}break;
 		case GPIOF_BASE:
 		{
 			if((RCC->AHB1ENR & RCC_AHB1ENR_GPIOFEN) == 0)

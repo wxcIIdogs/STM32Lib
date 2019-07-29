@@ -1,4 +1,5 @@
-#include "base_com.h"
+#include "stm32F4Define.h"
+
 
 void SystemInit(void)
 {
@@ -7,6 +8,10 @@ void SystemInit(void)
 
 int main(void)
 {
-	while(1);
+	main_test();
+	while(1)
+	{
+		
+	}
 }
 

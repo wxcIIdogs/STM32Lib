@@ -27,10 +27,10 @@ typedef struct// ops
 
 typedef struct 
 {
-	stmOperations ops;		//STMOperations
-	stuDevNode node;		//StuDevNode
-	uint8_t devName[20];	//DevName
-}deviceBase;				//DeviceBase
+	stmOperations ops;				//STMOperations
+	stuDevNode node;					//StuDevNode
+	uint8_t devName[20];			//DevName
+}deviceBase;								//DeviceBase
 
 
 #endif
