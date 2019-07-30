@@ -67,7 +67,7 @@ RpyStatus gpioIoctl(enumGPIO defGPIO,u8* pin_index,u16 pin_cfg)
 }
 
 
-GpioOperations Gpio_opt = 
+gpio_Operation gpio_devOpt = 
 {
 	.open = gpioOpen,
 	.write = gpioWrite,
