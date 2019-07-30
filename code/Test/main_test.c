@@ -8,10 +8,7 @@ void initDev_test()
 
 void loop_test()
 {
-	while(1)
-	{
-		GPIO_ToggleBit(GPIOE,11);
-	}
+	GPIO_ToggleBit(GPIOE,11);
 	
 }
 

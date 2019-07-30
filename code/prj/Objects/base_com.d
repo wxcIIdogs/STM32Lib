@@ -1,0 +1,9 @@
+.\objects\base_com.o: ..\applib\base_com.c
+.\objects\base_com.o: ..\applib\base_com.h
+.\objects\base_com.o: D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+.\objects\base_com.o: D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
+.\objects\base_com.o: ..\hardwarelib\cmsis\core_cm4.h
+.\objects\base_com.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\base_com.o: ..\hardwarelib\cmsis\cmsis_compiler.h
+.\objects\base_com.o: ..\hardwarelib\cmsis\cmsis_armcc.h
+.\objects\base_com.o: D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h

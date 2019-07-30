@@ -1,0 +1,15 @@
+.\objects\main_test.o: ..\Test\main_test.c
+.\objects\main_test.o: ..\user\stm32F4Define.h
+.\objects\main_test.o: ..\applib\base_com.h
+.\objects\main_test.o: D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+.\objects\main_test.o: D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
+.\objects\main_test.o: ..\hardwarelib\cmsis\core_cm4.h
+.\objects\main_test.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main_test.o: ..\hardwarelib\cmsis\cmsis_compiler.h
+.\objects\main_test.o: ..\hardwarelib\cmsis\cmsis_armcc.h
+.\objects\main_test.o: D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
+.\objects\main_test.o: ..\hardwarelib\usart.h
+.\objects\main_test.o: ..\hardwarelib\common.h
+.\objects\main_test.o: ..\hardwarelib\gpio.h
+.\objects\main_test.o: ..\Test\main_test.h
+.\objects\main_test.o: ..\user\stm32F4Define.h

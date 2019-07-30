@@ -61,9 +61,9 @@ void GPIO_Init(GPIO_TypeDef* port,u8 pin_index,u16 pin_cfg)
 		}break;
 		case GPIOE_BASE:
 		{
-			if((RCC->AHB1ENR & RCC_AHB1ENR_GPIOFEN) == 0)
+			if((RCC->AHB1ENR & RCC_AHB1ENR_GPIOEEN) == 0)
 			{
-				RCC->AHB1ENR |= RCC_AHB1ENR_GPIOFEN;
+				RCC->AHB1ENR |= RCC_AHB1ENR_GPIOEEN;
 			}
 		}break;
 		case GPIOF_BASE:
@@ -75,23 +75,23 @@ void GPIO_Init(GPIO_TypeDef* port,u8 pin_index,u16 pin_cfg)
 		}break;
 		case GPIOG_BASE:
 		{
-			if((RCC->AHB1ENR & RCC_AHB1ENR_GPIOFEN) == 0)
+			if((RCC->AHB1ENR & RCC_AHB1ENR_GPIOGEN) == 0)
 			{
-				RCC->AHB1ENR |= RCC_AHB1ENR_GPIOFEN;
+				RCC->AHB1ENR |= RCC_AHB1ENR_GPIOGEN;
 			}
 		}break;
 		case GPIOH_BASE:
 		{
-			if((RCC->AHB1ENR & RCC_AHB1ENR_GPIOFEN) == 0)
+			if((RCC->AHB1ENR & RCC_AHB1ENR_GPIOHEN) == 0)
 			{
-				RCC->AHB1ENR |= RCC_AHB1ENR_GPIOFEN;
+				RCC->AHB1ENR |= RCC_AHB1ENR_GPIOHEN;
 			}
 		}break;
 		case GPIOI_BASE:
 		{
-			if((RCC->AHB1ENR & RCC_AHB1ENR_GPIOFEN) == 0)
+			if((RCC->AHB1ENR & RCC_AHB1ENR_GPIOIEN) == 0)
 			{
-				RCC->AHB1ENR |= RCC_AHB1ENR_GPIOFEN;
+				RCC->AHB1ENR |= RCC_AHB1ENR_GPIOIEN;
 			}
 		}break;
 		default:return;

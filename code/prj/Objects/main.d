@@ -1,0 +1,15 @@
+.\objects\main.o: ..\user\main.c
+.\objects\main.o: ..\user\stm32F4Define.h
+.\objects\main.o: ..\applib\base_com.h
+.\objects\main.o: D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+.\objects\main.o: D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h
+.\objects\main.o: ..\hardwarelib\cmsis\core_cm4.h
+.\objects\main.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\main.o: ..\hardwarelib\cmsis\cmsis_compiler.h
+.\objects\main.o: ..\hardwarelib\cmsis\cmsis_armcc.h
+.\objects\main.o: D:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.13.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h
+.\objects\main.o: ..\hardwarelib\usart.h
+.\objects\main.o: ..\hardwarelib\common.h
+.\objects\main.o: ..\hardwarelib\gpio.h
+.\objects\main.o: ..\Test\main_test.h
+.\objects\main.o: ..\user\stm32F4Define.h
