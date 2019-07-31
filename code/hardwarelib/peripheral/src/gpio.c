@@ -66,7 +66,6 @@ RpyStatus gpioIoctl(enumGPIO defGPIO,u8* pin_index,u16 pin_cfg)
 	return True;
 }
 
-
 gpio_Operation gpio_devOpt = 
 {
 	.open = gpioOpen,

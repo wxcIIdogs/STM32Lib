@@ -1,7 +1,8 @@
-#ifndef __USART_H__
-#define	__USART_H__
+#ifndef __USARTREGISTER_H__
+#define	__USARTREGISTER_H__
 
-#include "common.h"
+#include "stm32F4Define.h"
+
 
 #define USART_DATA_LENGTH_8BIT	(0<<0)
 #define	USART_DATA_LENGTH_9BIT	(1<<0)

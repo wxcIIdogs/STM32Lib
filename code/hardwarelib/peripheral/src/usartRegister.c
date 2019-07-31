@@ -1,5 +1,5 @@
-#include "usart.h"
-
+#include "stm32F4Define.h"
+#include "usartRegister.h"
 void USART_Init(USART_TypeDef* usart,u32 baud,u8 usart_cfg)
 {
 	switch((u32)usart)

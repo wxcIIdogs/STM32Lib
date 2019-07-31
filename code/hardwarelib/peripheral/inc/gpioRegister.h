@@ -52,7 +52,7 @@ extern void 	GPIO_MultiInit(GPIO_TypeDef* port,u16 pin_map,u16 pin_cfg);
 *Attentions:	нч
 **************************************************
 */
-#define	GPIO_WritePort(port,value)		port->ODR = value
+#define	GPIO_WritePort(port,value)		(port->ODR = value)
 
 /*
 **************************************************
@@ -84,7 +84,7 @@ extern void 	GPIO_MultiInit(GPIO_TypeDef* port,u16 pin_map,u16 pin_cfg);
 *Attentions:	нч
 **************************************************
 */
-#define	GPIO_WriteBit(port,pin_index,value)		port->ODR = (port->ODR & (~(1<<pin_index))) | (value == 0 ? 0 : (1<<pin_index))
+#define	GPIO_WriteBit(port,pin_index,value)		(port->ODR = (port->ODR & (~(1<<pin_index))) | (value == 0 ? 0 : (1<<pin_index)))
 
 /*
 **************************************************

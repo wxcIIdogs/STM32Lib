@@ -6,9 +6,7 @@
 
 
 
-#define	 GET_GPIO(__X__)			((GPIO_TypeDef *)((__X__) * 0x400 + GPIOA_BASE))
-
-
+#define	 GET_GPIO_OBJ(__X__)			((GPIO_TypeDef *)((__X__) * 0x400 + GPIOA_BASE))
 
 
 extern RpyStatus 			initGpioOpt(enumGPIO defGPIO,u8 pin_index,u16 pin_cfg);

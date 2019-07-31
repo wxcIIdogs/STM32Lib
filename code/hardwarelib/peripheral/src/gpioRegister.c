@@ -18,12 +18,12 @@
 */
 void GPIO_Init(GPIO_TypeDef* port,u8 pin_index,u16 pin_cfg)
 {
-	static const u32 MaskTable_2Bit[16] = 
+	static const u32 sc_MaskTable_2Bit[16] = 
 	{
-	~(3UL<<0),	~(3UL<<2),	~(3UL<<4),	~(3UL<<6),
-	~(3UL<<8),	~(3UL<<10),	~(3UL<<12),	~(3UL<<14),
-	~(3UL<<16),	~(3UL<<18),	~(3UL<<20),	~(3UL<<22),
-	~(3UL<<24),	~(3UL<<26),	~(3UL<<28),	~(3UL<<30)
+		~(3UL<<0),	~(3UL<<2),	~(3UL<<4),	~(3UL<<6),
+		~(3UL<<8),	~(3UL<<10),	~(3UL<<12),	~(3UL<<14),
+		~(3UL<<16),	~(3UL<<18),	~(3UL<<20),	~(3UL<<22),
+		~(3UL<<24),	~(3UL<<26),	~(3UL<<28),	~(3UL<<30)
 	};
 	if(pin_index > 15)
 	{

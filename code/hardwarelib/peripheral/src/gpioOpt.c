@@ -11,7 +11,7 @@ RpyStatus initGpioOpt(enumGPIO defGPIO,u8 pin_index,u16 pin_cfg)
 		return False;
 	}
 	//init gpio 
-	GPIO_Init(GET_GPIO(defGPIO),pin_index,pin_cfg);
+	GPIO_Init(GET_GPIO_OBJ(defGPIO),pin_index,pin_cfg);
 	return True;
 }
 
@@ -21,7 +21,7 @@ RpyStatus writeGpioOpt(enumGPIO defGPIO,u8 pin_index,u8 data)
 	{
 		return False;
 	}
-	GPIO_WritePort(GET_GPIO(defGPIO),pin_index,data % 1);
+	GPIO_WritePort(GET_GPIO_OBJ(defGPIO),pin_index,data % 1);
 	return True;
 }
 
@@ -31,7 +31,7 @@ RpyStatus readGpioOpt(enumGPIO defGPIO,u8 pin_index,u8 *data)
 	{
 		return False;
 	}
-	*data = GPIO_ReadBit(GET_GPIO(defGPIO),pin_index);
+	*data = GPIO_ReadBit(GET_GPIO_OBJ(defGPIO),pin_index);
 	return True;
 }
 
@@ -41,10 +41,10 @@ RpyStatus ToggleGpioOpt(enumGPIO defGPIO,u8 pin_index,u8 *status)
 	{
 		return False;
 	}
-	GPIO_ToggleBit(GET_GPIO(defGPIO),pin_index);
+	GPIO_ToggleBit(GET_GPIO_OBJ(defGPIO),pin_index);
 	if(status != NULL)
 	{
-		*status = GPIO_ReadBit(GET_GPIO(defGPIO),pin_index);
+		*status = GPIO_ReadBit(GET_GPIO_OBJ(defGPIO),pin_index);
 	}
 	return True;
 }

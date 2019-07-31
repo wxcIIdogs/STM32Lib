@@ -39,6 +39,7 @@ pin_cfg:
 
 #define	PIN_AF(n)		(n<<8)	//(AFRLy selection)
 
+
 typedef enum
 {
 	PIN_GPIO_0 = 0,
@@ -74,6 +75,7 @@ typedef enum
 	GPI,	
 }enumGPIO;
 
+
 typedef struct// ops
 {
 	RpyStatus (*open)(void);		
@@ -83,7 +85,7 @@ typedef struct// ops
 	RpyStatus (*release)(void);
 }gpio_Operation;//STMOperations
 
-gpio_Operation gpio_devOpt;
+extern gpio_Operation 	gpio_devOpt;
 
 
 
