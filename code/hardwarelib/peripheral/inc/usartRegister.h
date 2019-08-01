@@ -16,4 +16,12 @@
 #define	USART_STOP_2BIT			(2<<3)
 #define	USART_STOP_1P5BIT		(3<<3)
 
+
+
+extern void 		USART1_TXE_Handler(void);
+extern void 		USART1_RXNE_Handler(void);
+extern void 		USART1_TC_Handler(void);
+extern void 		USART1_IDLE_Handler(void);
+
+
 #endif
