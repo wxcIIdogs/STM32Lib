@@ -1,16 +1,37 @@
 #include "stm32F4Define.h"
 
+void USART1_TXE_Handler(void)
+{
+}
+void USART1_RXNE_Handler(void)
+{
+	u8 value = USART_ReadByte(USART1);
+	if((value >= 97) && (value <= 122))	//大写字母转小写
+	{
+		value -= 32;
+	}
+	USART_WriteByte(USART1,value);
+}
+void USART1_TC_Handler(void)
+{
+}
+void USART1_IDLE_Handler(void)
+{
+}
+
 void initDev_test()
 {
 	GPIO_Init(GPIOE,11,PIN_MODE_OUT);
-	GPIO_Init(GPIOE,12,PIN_MODE_OUT);
-	
+	GPIO_Init(GPIOA,9,PIN_MODE_AF | PIN_SPD_VHS | PIN_OTP_PP | PIN_AF(7));
+	GPIO_Init(GPIOA,10,PIN_MODE_AF | PIN_SPD_VHS | PIN_OTP_PP | PIN_AF(7));
+	USART_Init(USART1,115200);
+	USART_InterruptEnable(USART1,m_usart_isr_rxne);
 }
 
 void loop_test()
 {
 	GPIO_ToggleBit(GPIOE,11);
-	GPIO_ToggleBit(GPIOE,12);	
+	
 }
 
 void main_test()
@@ -18,6 +39,7 @@ void main_test()
 	initDev_test();
 	loop_test();
 }
+
 
 
 

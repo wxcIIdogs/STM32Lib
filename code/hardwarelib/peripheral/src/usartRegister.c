@@ -77,10 +77,19 @@ void USART_Init(USART_TypeDef* usart,u32 baud)
 	}
 }
 
+void USART_WriteByte(USART_TypeDef* usart,u8 value)
+{
+	usart->DR = value;
+}
+
+u8  USART_ReadByte(USART_TypeDef* usart)
+{
+	return usart->DR;
+}
 
 void USART_InterruptEnable(USART_TypeDef* usart,enumUSART_ISR_Source usart_isr_source)
 {
-	usart->CR1 |=  [usart_isr_source];
+	usart->CR1 |=  _usart_isr_bit_table[usart_isr_source];
 }
 
 void USART_InterruptDisable(USART_TypeDef* usart,enumUSART_ISR_Source usart_isr_source)
