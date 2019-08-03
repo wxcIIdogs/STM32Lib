@@ -1,6 +1,9 @@
-#ifndef __RCC_H__
-#define	__RCC_H__
+#ifndef __RCCREGISTER_H__
+#define	__RCCREGISTER_H__
 
-#include "common.h"
+
+
+extern void 		SystemInitRegister(void);
+
 
 #endif

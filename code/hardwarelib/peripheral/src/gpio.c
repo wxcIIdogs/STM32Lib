@@ -5,7 +5,7 @@
 
 RpyStatus gpioOpen()
 {
-	
+	return True;
 }
 
 RpyStatus gpioWrite(enumGPIO defGPIO,u8* pin_index,u8 *data)
@@ -46,7 +46,7 @@ RpyStatus gpioRead(enumGPIO defGPIO,u8* pin_index,u8 *data)
 
 RpyStatus gpioRelease()
 {
-	
+	return True;
 }
 
 RpyStatus gpioIoctl(enumGPIO defGPIO,u8* pin_index,u16 pin_cfg)

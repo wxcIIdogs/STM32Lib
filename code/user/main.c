@@ -2,8 +2,8 @@
 
 int main(void)
 {
-	SysTick_Config(1600000-1);
-	initDev_test();
+	SystemInit();
+	main_test();
 	while(1)
 	{
 		
@@ -12,5 +12,5 @@ int main(void)
 
 void SysTick_Handler(void)
 {
-	loop_test();
+	//loop_test();
 }

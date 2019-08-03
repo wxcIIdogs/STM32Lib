@@ -1,5 +1,5 @@
-#ifndef __GPIO_H__
-#define	__GPIO_H__
+#ifndef __GPIOREGISTER_H__
+#define	__GPIOREGISTER_H__
 
 #include "stm32F4Define.h"
 

@@ -96,9 +96,9 @@ void GPIO_Init(GPIO_TypeDef* port,u8 pin_index,u16 pin_cfg)
 		}break;
 		default:return;
 	}
-	port->MODER = 	(port->MODER & MaskTable_2Bit[pin_index]) 	| ((u32)((pin_cfg>>0) & 0x0003) << (pin_index*2));
-	port->PUPDR = 	(port->PUPDR & MaskTable_2Bit[pin_index]) 	| ((u32)((pin_cfg>>2) & 0x0003) << (pin_index*2));
-	port->OSPEEDR =	(port->OSPEEDR & MaskTable_2Bit[pin_index]) | ((u32)((pin_cfg>>4) & 0x0003) << (pin_index*2));
+	port->MODER = 	(port->MODER & sc_MaskTable_2Bit[pin_index]) 	| ((u32)((pin_cfg>>0) & 0x0003) << (pin_index*2));
+	port->PUPDR = 	(port->PUPDR & sc_MaskTable_2Bit[pin_index]) 	| ((u32)((pin_cfg>>2) & 0x0003) << (pin_index*2));
+	port->OSPEEDR =	(port->OSPEEDR & sc_MaskTable_2Bit[pin_index]) | ((u32)((pin_cfg>>4) & 0x0003) << (pin_index*2));
 	port->OTYPER = 	(port->OTYPER & (~(1<<pin_cfg))) 			| ((u32)((pin_cfg>>6) & 0x0001) << pin_index);
 	if(pin_index < 8)
 	{

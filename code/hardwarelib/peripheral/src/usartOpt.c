@@ -11,7 +11,7 @@ RpyStatus initUsartOpt(enumUsart defUSART,u32 baud)
 	}
 	//init usart 
 	USART_Init(sg_UsartBuff[defUSART],baud);
-	USART_InterruptEnable(sg_UsartBuff[defUSART]);
+	//USART_InterruptEnable(sg_UsartBuff[defUSART]);
 	return True;
 }
 

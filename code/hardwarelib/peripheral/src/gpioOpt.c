@@ -21,7 +21,7 @@ RpyStatus writeGpioOpt(enumGPIO defGPIO,u8 pin_index,u8 data)
 	{
 		return False;
 	}
-	GPIO_WritePort(GET_GPIO_OBJ(defGPIO),pin_index,data % 1);
+	GPIO_WriteBit(GET_GPIO_OBJ(defGPIO),pin_index,data % 1);
 	return True;
 }
 
