@@ -2,7 +2,6 @@
 
 int main(void)
 {
-	SystemInit();
 	main_test();
 	while(1)
 	{
