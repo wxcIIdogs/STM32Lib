@@ -23,11 +23,29 @@ typedef enum
     m_usart_dma_rx
 }enumUSART_DMA_Source;
 
+typedef enum
+{
+    m_usart_dma = 0,
+		m_usart_int,
+    m_usart_poll,		
+}enumUSART_Mode;
 
-void USART_Init(USART_TypeDef* usart,u32 baud);
-void USART_InterruptEnable(USART_TypeDef* usart,enumUSART_ISR_Source usart_isr_source);
-void USART_InterruptDisable(USART_TypeDef* usart,enumUSART_ISR_Source usart_isr_source);
-void USART_DMAEnable(USART_TypeDef* usart,enumUSART_DMA_Source usart_dma_source);
-void USART_DMADisable(USART_TypeDef* usart,enumUSART_DMA_Source usart_dma_source);
+
+typedef struct// ops
+{
+	RpyStatus (*open)(enumUsart defUSART,u32 baud,enumUSART_Mode mode);		
+	RpyStatus (*write)(enumUsart defUSART,u8* data,uint32_t len);
+	RpyStatus (*read)(enumUsart defUSART,u8* data,uint32_t *len);
+	RpyStatus (*ioctl)(enumUsart defUSART,u8 pin_cfg);
+	RpyStatus (*release)(enumUsart defUSART);
+}usart_Operation;//STMOperations
+
+extern usart_Operation 	usart_devOpt;
+extern RpyStatus usartOpen(enumUsart defUSART,u32 baud,enumUSART_Mode mode);
+//void USART_Init(USART_TypeDef* usart,u32 baud);
+//void USART_InterruptEnable(USART_TypeDef* usart,enumUSART_ISR_Source usart_isr_source);
+//void USART_InterruptDisable(USART_TypeDef* usart,enumUSART_ISR_Source usart_isr_source);
+//void USART_DMAEnable(USART_TypeDef* usart,enumUSART_DMA_Source usart_dma_source);
+//void USART_DMADisable(USART_TypeDef* usart,enumUSART_DMA_Source usart_dma_source);
 
 #endif

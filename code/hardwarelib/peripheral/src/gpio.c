@@ -8,38 +8,27 @@ RpyStatus gpioOpen()
 	return True;
 }
 
-RpyStatus gpioWrite(enumGPIO defGPIO,u8* pin_index,u8 *data)
+RpyStatus gpioWrite(enumGPIO defGPIO,u8 pin_index,u8 data)
 {
-	if(data  == NULL || pin_index == NULL)
+	if(writeGpioOpt(defGPIO,pin_index,data) == False)
 	{
 		return False;
-	}
-	while(pin_index != NULL && data != NULL)
-	{
-		if(writeGpioOpt(defGPIO,*pin_index,*data) == False)
-		{
-			return False;
-		}
-		pin_index ++;
-		data++;
 	}
 	return True;
 }
 
-RpyStatus gpioRead(enumGPIO defGPIO,u8* pin_index,u8 *data)
+RpyStatus gpioRead(enumGPIO defGPIO,u8 pin_index,u8 *data)
 {
-	if(data  == NULL || pin_index == NULL)
+	if(data  == NULL)
 	{
 		return False;
 	}
-	while(pin_index != NULL && data != NULL)
+	if(data != NULL)
 	{
-		if(readGpioOpt(defGPIO,*pin_index,data) == False)
+		if(readGpioOpt(defGPIO,pin_index,data) == False)
 		{
 			return False;
 		}
-		pin_index ++;
-		data++;
 	}
 	return True;
 }
@@ -49,19 +38,15 @@ RpyStatus gpioRelease()
 	return True;
 }
 
-RpyStatus gpioIoctl(enumGPIO defGPIO,u8* pin_index,u16 pin_cfg)
+RpyStatus gpioIoctl(enumGPIO defGPIO,u8 pin_index,u16 pin_cfg)
 {
-	if(pin_cfg > PIN_OTP_OD || defGPIO > GPI || pin_index == NULL)
+	if(defGPIO > GPI)
 	{
 		return False;
 	}
-	while(pin_index != NULL)
+	if(initGpioOpt(defGPIO,pin_index,pin_cfg) == False)
 	{
-		if(initGpioOpt(defGPIO,*pin_index,pin_cfg) == False)
-		{
-			return False;
-		}
-		pin_index ++;
+		return False;
 	}
 	return True;
 }

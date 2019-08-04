@@ -6,7 +6,7 @@
 
 RpyStatus initGpioOpt(enumGPIO defGPIO,u8 pin_index,u16 pin_cfg)
 {
-	if(pin_index > 15 || pin_cfg > PIN_OTP_OD || defGPIO > GPI)
+	if(pin_index > 15 ||  defGPIO > GPI)
 	{
 		return False;
 	}
@@ -21,7 +21,7 @@ RpyStatus writeGpioOpt(enumGPIO defGPIO,u8 pin_index,u8 data)
 	{
 		return False;
 	}
-	GPIO_WriteBit(GET_GPIO_OBJ(defGPIO),pin_index,data % 1);
+	GPIO_WriteBit(GET_GPIO_OBJ(defGPIO),pin_index,data);
 	return True;
 }
 

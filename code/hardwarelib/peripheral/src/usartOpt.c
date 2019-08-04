@@ -11,7 +11,6 @@ RpyStatus initUsartOpt(enumUsart defUSART,u32 baud)
 	}
 	//init usart 
 	USART_Init(sg_UsartBuff[defUSART],baud);
-	//USART_InterruptEnable(sg_UsartBuff[defUSART]);
 	return True;
 }
 
@@ -20,7 +19,11 @@ RpyStatus writeUsartOpt(enumUsart defUSART,u8* data,u32 len)
 	if(defUSART >= USTCOUNT || data == NULL)
 	{
 		return False;
-	}		
+	}	
+	for(int i = 0 ; i < len && data[i] != '\0'; i ++)
+	{
+		USART_WriteByte(sg_UsartBuff[defUSART],data[i]);
+	}
 	return True;
 }
 
@@ -30,11 +33,25 @@ RpyStatus readUsartOpt(enumUsart defUSART,u8 *data,u32 *len)
 	{
 		return False;
 	}
-
+	*len = 0;
+	while(1)
+	{
+		if(USART_checkPollRead(sg_UsartBuff[defUSART]) == 0)
+				break;
+		u8 tmp = USART_ReadByte(sg_UsartBuff[defUSART]);	
+		if(data + *len != NULL)
+			data[(*len)++] = tmp;
+		else
+			break;
+	}
 	return True;
 }
 
-RpyStatus setUsartOpt(enumUsart defUSART,u8 pin_index,u8 mode)
+RpyStatus setUsartOpt(enumUsart defUSART,u8 mode)
+{
+	return True;
+}
+RpyStatus closeUsartOpt(enumUsart defUSART)
 {
 	return True;
 }

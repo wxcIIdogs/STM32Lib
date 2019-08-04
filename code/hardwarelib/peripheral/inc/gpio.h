@@ -79,9 +79,9 @@ typedef enum
 typedef struct// ops
 {
 	RpyStatus (*open)(void);		
-	RpyStatus (*write)(enumGPIO defGPIO,u8* pin_index,u8 *data);
-	RpyStatus (*read)(enumGPIO defGPIO,u8* pin_index,u8 *data);
-	RpyStatus (*ioctl)(enumGPIO defGPIO,u8* pin_index,u16 pin_cfg);
+	RpyStatus (*write)(enumGPIO defGPIO,u8 pin_index,u8 data);
+	RpyStatus (*read)(enumGPIO defGPIO,u8 pin_index,u8 *data);
+	RpyStatus (*ioctl)(enumGPIO defGPIO,u8 pin_index,u16 pin_cfg);
 	RpyStatus (*release)(void);
 }gpio_Operation;//STMOperations
 
