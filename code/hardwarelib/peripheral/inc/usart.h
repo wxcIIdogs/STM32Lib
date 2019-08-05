@@ -1,7 +1,7 @@
 #ifndef __USART_H__
 #define	__USART_H__
 
-#include "common.h"
+#include "stm32F4Define.h"
 
 typedef enum
 {
@@ -26,8 +26,7 @@ typedef enum
 typedef enum
 {
     m_usart_dma = 0,
-		m_usart_int,
-    m_usart_poll,		
+	m_usart_int,    
 }enumUSART_Mode;
 
 

@@ -110,28 +110,4 @@ void GPIO_Init(GPIO_TypeDef* port,u8 pin_index,u16 pin_cfg)
 	}
 }
 
-/*
-**************************************************
-*FunctionName:	void GPIO_MultiInit(GPIO_TypeDef* port,u16 pin_map,u16 pin_cfg)
-*
-*Descriptor:	同一端口多个引脚初始化为同一配置
-*
-*Arguments:		port		端口：GPIOA~GPIOI
-*				pin_map		引脚bitmap组合
-*				pin_cfg		脚配置
-*
-*Returns:		无
-*
-*Attentions:	无
-**************************************************
-*/
-void GPIO_MultiInit(GPIO_TypeDef* port,u16 pin_map,u16 pin_cfg)
-{
-	for(u8 i=0;i<16;i++)
-	{
-		if(pin_map & (1<<i))
-		{
-			GPIO_Init(port,i,pin_cfg);
-		}
-	}
-}
+

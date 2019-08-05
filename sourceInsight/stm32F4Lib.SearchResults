@@ -1,0 +1,274 @@
+---- uint16_t Matches (285 in 36 files) ----
+arm_common_tables.h (hardwareLib\cmsis) line 34 : extern const uint16_t armBitRevTable[1024];
+arm_common_tables.h (hardwareLib\cmsis) line 75 : #define ARMBITREVINDEXTABLE_16_TABLE_LENGTH ((uint16_t)20)
+arm_common_tables.h (hardwareLib\cmsis) line 76 : #define ARMBITREVINDEXTABLE_32_TABLE_LENGTH ((uint16_t)48)
+arm_common_tables.h (hardwareLib\cmsis) line 77 : #define ARMBITREVINDEXTABLE_64_TABLE_LENGTH ((uint16_t)56)
+arm_common_tables.h (hardwareLib\cmsis) line 78 : #define ARMBITREVINDEXTABLE_128_TABLE_LENGTH ((uint16_t)208)
+arm_common_tables.h (hardwareLib\cmsis) line 79 : #define ARMBITREVINDEXTABLE_256_TABLE_LENGTH ((uint16_t)440)
+arm_common_tables.h (hardwareLib\cmsis) line 80 : #define ARMBITREVINDEXTABLE_512_TABLE_LENGTH ((uint16_t)448)
+arm_common_tables.h (hardwareLib\cmsis) line 81 : #define ARMBITREVINDEXTABLE_1024_TABLE_LENGTH ((uint16_t)1800)
+arm_common_tables.h (hardwareLib\cmsis) line 82 : #define ARMBITREVINDEXTABLE_2048_TABLE_LENGTH ((uint16_t)3808)
+arm_common_tables.h (hardwareLib\cmsis) line 83 : #define ARMBITREVINDEXTABLE_4096_TABLE_LENGTH ((uint16_t)4032)
+arm_common_tables.h (hardwareLib\cmsis) line 85 : extern const uint16_t armBitRevIndexTable16[ARMBITREVINDEXTABLE_16_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 86 : extern const uint16_t armBitRevIndexTable32[ARMBITREVINDEXTABLE_32_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 87 : extern const uint16_t armBitRevIndexTable64[ARMBITREVINDEXTABLE_64_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 88 : extern const uint16_t armBitRevIndexTable128[ARMBITREVINDEXTABLE_128_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 89 : extern const uint16_t armBitRevIndexTable256[ARMBITREVINDEXTABLE_256_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 90 : extern const uint16_t armBitRevIndexTable512[ARMBITREVINDEXTABLE_512_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 91 : extern const uint16_t armBitRevIndexTable1024[ARMBITREVINDEXTABLE_1024_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 92 : extern const uint16_t armBitRevIndexTable2048[ARMBITREVINDEXTABLE_2048_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 93 : extern const uint16_t armBitRevIndexTable4096[ARMBITREVINDEXTABLE_4096_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 96 : #define ARMBITREVINDEXTABLE_FIXED_16_TABLE_LENGTH ((uint16_t)12)
+arm_common_tables.h (hardwareLib\cmsis) line 97 : #define ARMBITREVINDEXTABLE_FIXED_32_TABLE_LENGTH ((uint16_t)24)
+arm_common_tables.h (hardwareLib\cmsis) line 98 : #define ARMBITREVINDEXTABLE_FIXED_64_TABLE_LENGTH ((uint16_t)56)
+arm_common_tables.h (hardwareLib\cmsis) line 99 : #define ARMBITREVINDEXTABLE_FIXED_128_TABLE_LENGTH ((uint16_t)112)
+arm_common_tables.h (hardwareLib\cmsis) line 100 : #define ARMBITREVINDEXTABLE_FIXED_256_TABLE_LENGTH ((uint16_t)240)
+arm_common_tables.h (hardwareLib\cmsis) line 101 : #define ARMBITREVINDEXTABLE_FIXED_512_TABLE_LENGTH ((uint16_t)480)
+arm_common_tables.h (hardwareLib\cmsis) line 102 : #define ARMBITREVINDEXTABLE_FIXED_1024_TABLE_LENGTH ((uint16_t)992)
+arm_common_tables.h (hardwareLib\cmsis) line 103 : #define ARMBITREVINDEXTABLE_FIXED_2048_TABLE_LENGTH ((uint16_t)1984)
+arm_common_tables.h (hardwareLib\cmsis) line 104 : #define ARMBITREVINDEXTABLE_FIXED_4096_TABLE_LENGTH ((uint16_t)4032)
+arm_common_tables.h (hardwareLib\cmsis) line 106 : extern const uint16_t armBitRevIndexTable_fixed_16[ARMBITREVINDEXTABLE_FIXED_16_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 107 : extern const uint16_t armBitRevIndexTable_fixed_32[ARMBITREVINDEXTABLE_FIXED_32_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 108 : extern const uint16_t armBitRevIndexTable_fixed_64[ARMBITREVINDEXTABLE_FIXED_64_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 109 : extern const uint16_t armBitRevIndexTable_fixed_128[ARMBITREVINDEXTABLE_FIXED_128_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 110 : extern const uint16_t armBitRevIndexTable_fixed_256[ARMBITREVINDEXTABLE_FIXED_256_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 111 : extern const uint16_t armBitRevIndexTable_fixed_512[ARMBITREVINDEXTABLE_FIXED_512_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 112 : extern const uint16_t armBitRevIndexTable_fixed_1024[ARMBITREVINDEXTABLE_FIXED_1024_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 113 : extern const uint16_t armBitRevIndexTable_fixed_2048[ARMBITREVINDEXTABLE_FIXED_2048_TABLE_LENGTH];
+arm_common_tables.h (hardwareLib\cmsis) line 114 : extern const uint16_t armBitRevIndexTable_fixed_4096[ARMBITREVINDEXTABLE_FIXED_4096_TABLE_LENGTH];
+arm_math.h (hardwareLib\cmsis) line 208 :  *       uint16_t numRows;     // number of rows of the matrix.
+arm_math.h (hardwareLib\cmsis) line 209 :  *       uint16_t numCols;     // number of columns of the matrix.
+{anonarm_fir_instance_q7} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;        /**< number of filter coefficients in the filter. */
+{anonarm_fir_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;         /**< number of filter coefficients in the filter. */
+{anonarm_fir_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;         /**< number of filter coefficients in the filter. */
+{anonarm_fir_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;     /**< number of filter coefficients in the filter. */
+arm_fir_init_q7 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+{anonarm_matrix_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numRows;     /**< number of rows of the matrix.     */
+{anonarm_matrix_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numCols;     /**< number of columns of the matrix.  */
+{anonarm_matrix_instance_f64} in arm_math.h (hardwareLib\cmsis) :     uint16_t numRows;     /**< number of rows of the matrix.     */
+{anonarm_matrix_instance_f64} in arm_math.h (hardwareLib\cmsis) :     uint16_t numCols;     /**< number of columns of the matrix.  */
+{anonarm_matrix_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numRows;     /**< number of rows of the matrix.     */
+{anonarm_matrix_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numCols;     /**< number of columns of the matrix.  */
+{anonarm_matrix_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numRows;     /**< number of rows of the matrix.     */
+{anonarm_matrix_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numCols;     /**< number of columns of the matrix.  */
+arm_mat_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t nRows,
+arm_mat_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t nColumns,
+arm_mat_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t nRows,
+arm_mat_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t nColumns,
+arm_mat_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t nRows,
+arm_mat_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t nColumns,
+{anonarm_bilinear_interp_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numRows;   /**< number of rows in the data table. */
+{anonarm_bilinear_interp_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numCols;   /**< number of columns in the data table. */
+{anonarm_bilinear_interp_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numRows;   /**< number of rows in the data table. */
+{anonarm_bilinear_interp_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numCols;   /**< number of columns in the data table. */
+{anonarm_bilinear_interp_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numRows;   /**< number of rows in the data table. */
+{anonarm_bilinear_interp_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numCols;   /**< number of columns in the data table. */
+{anonarm_bilinear_interp_instance_q7} in arm_math.h (hardwareLib\cmsis) :     uint16_t numRows;   /**< number of rows in the data table. */
+{anonarm_bilinear_interp_instance_q7} in arm_math.h (hardwareLib\cmsis) :     uint16_t numCols;   /**< number of columns in the data table. */
+{anonarm_cfft_radix2_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLen;                 /**< length of the FFT. */
+{anonarm_cfft_radix2_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t *pBitRevTable;          /**< points to the bit reversal table. */
+{anonarm_cfft_radix2_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t twidCoefModifier;       /**< twiddle coefficient modifier that supports different size FFTs with the same twiddle factor table. */
+{anonarm_cfft_radix2_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t bitRevFactor;           /**< bit reversal modifier that supports different size FFTs with the same bit reversal table. */
+arm_cfft_radix2_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t fftLen,
+{anonarm_cfft_radix4_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLen;                 /**< length of the FFT. */
+{anonarm_cfft_radix4_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t *pBitRevTable;          /**< points to the bit reversal table. */
+{anonarm_cfft_radix4_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t twidCoefModifier;       /**< twiddle coefficient modifier that supports different size FFTs with the same twiddle factor table. */
+{anonarm_cfft_radix4_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t bitRevFactor;           /**< bit reversal modifier that supports different size FFTs with the same bit reversal table. */
+arm_cfft_radix4_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t fftLen,
+{anonarm_cfft_radix2_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLen;                 /**< length of the FFT. */
+{anonarm_cfft_radix2_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t *pBitRevTable;          /**< points to the bit reversal table. */
+{anonarm_cfft_radix2_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t twidCoefModifier;       /**< twiddle coefficient modifier that supports different size FFTs with the same twiddle factor table. */
+{anonarm_cfft_radix2_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t bitRevFactor;           /**< bit reversal modifier that supports different size FFTs with the same bit reversal table. */
+arm_cfft_radix2_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t fftLen,
+{anonarm_cfft_radix4_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLen;                 /**< length of the FFT. */
+{anonarm_cfft_radix4_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t *pBitRevTable;          /**< points to the bit reversal table. */
+{anonarm_cfft_radix4_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t twidCoefModifier;       /**< twiddle coefficient modifier that supports different size FFTs with the same twiddle factor table. */
+{anonarm_cfft_radix4_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t bitRevFactor;           /**< bit reversal modifier that supports different size FFTs with the same bit reversal table. */
+arm_cfft_radix4_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t fftLen,
+{anonarm_cfft_radix2_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLen;                   /**< length of the FFT. */
+{anonarm_cfft_radix2_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t *pBitRevTable;            /**< points to the bit reversal table. */
+{anonarm_cfft_radix2_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t twidCoefModifier;         /**< twiddle coefficient modifier that supports different size FFTs with the same twiddle factor table. */
+{anonarm_cfft_radix2_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t bitRevFactor;             /**< bit reversal modifier that supports different size FFTs with the same bit reversal table. */
+arm_cfft_radix2_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t fftLen,
+{anonarm_cfft_radix4_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLen;                   /**< length of the FFT. */
+{anonarm_cfft_radix4_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t *pBitRevTable;            /**< points to the bit reversal table. */
+{anonarm_cfft_radix4_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t twidCoefModifier;         /**< twiddle coefficient modifier that supports different size FFTs with the same twiddle factor table. */
+{anonarm_cfft_radix4_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t bitRevFactor;             /**< bit reversal modifier that supports different size FFTs with the same bit reversal table. */
+arm_cfft_radix4_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t fftLen,
+{anonarm_cfft_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLen;                   /**< length of the FFT. */
+{anonarm_cfft_instance_q15} in arm_math.h (hardwareLib\cmsis) :     const uint16_t *pBitRevTable;      /**< points to the bit reversal table. */
+{anonarm_cfft_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t bitRevLength;             /**< bit reversal table length. */
+{anonarm_cfft_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLen;                   /**< length of the FFT. */
+{anonarm_cfft_instance_q31} in arm_math.h (hardwareLib\cmsis) :     const uint16_t *pBitRevTable;      /**< points to the bit reversal table. */
+{anonarm_cfft_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t bitRevLength;             /**< bit reversal table length. */
+{anonarm_cfft_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLen;                   /**< length of the FFT. */
+{anonarm_cfft_instance_f32} in arm_math.h (hardwareLib\cmsis) :     const uint16_t *pBitRevTable;      /**< points to the bit reversal table. */
+{anonarm_cfft_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t bitRevLength;             /**< bit reversal table length. */
+{anonarm_rfft_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLenBy2;                         /**< length of the complex FFT. */
+{anonarm_rfft_fast_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t fftLenRFFT;             /**< length of the real sequence */
+arm_rfft_fast_init_f32 in arm_math.h (hardwareLib\cmsis) :    uint16_t fftLen);
+{anonarm_dct4_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t N;                          /**< length of the DCT4. */
+{anonarm_dct4_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t Nby2;                       /**< half of the length of the DCT4. */
+arm_dct4_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t N,
+arm_dct4_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t Nby2,
+{anonarm_dct4_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t N;                          /**< length of the DCT4. */
+{anonarm_dct4_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t Nby2;                       /**< half of the length of the DCT4. */
+arm_dct4_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t N,
+arm_dct4_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t Nby2,
+{anonarm_dct4_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t N;                          /**< length of the DCT4. */
+{anonarm_dct4_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t Nby2;                       /**< half of the length of the DCT4. */
+arm_dct4_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t N,
+arm_dct4_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t Nby2,
+{anonarm_fir_decimate_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;           /**< number of coefficients in the filter. */
+{anonarm_fir_decimate_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;           /**< number of coefficients in the filter. */
+{anonarm_fir_decimate_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;           /**< number of coefficients in the filter. */
+arm_fir_decimate_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_decimate_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_decimate_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+{anonarm_fir_interpolate_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t phaseLength;           /**< length of each polyphase filter component. */
+{anonarm_fir_interpolate_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t phaseLength;           /**< length of each polyphase filter component. */
+{anonarm_fir_interpolate_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t phaseLength;          /**< length of each polyphase filter component. */
+arm_fir_interpolate_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_interpolate_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_interpolate_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+{anonarm_fir_lattice_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numStages;                  /**< number of filter stages. */
+{anonarm_fir_lattice_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numStages;                  /**< number of filter stages. */
+{anonarm_fir_lattice_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numStages;                  /**< number of filter stages. */
+arm_fir_lattice_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t numStages,
+arm_fir_lattice_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t numStages,
+arm_fir_lattice_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t numStages,
+{anonarm_iir_lattice_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numStages;                  /**< number of stages in the filter. */
+{anonarm_iir_lattice_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numStages;                  /**< number of stages in the filter. */
+{anonarm_iir_lattice_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numStages;                  /**< number of stages in the filter. */
+arm_iir_lattice_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t numStages,
+arm_iir_lattice_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t numStages,
+arm_iir_lattice_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t numStages,
+{anonarm_lms_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;    /**< number of coefficients in the filter. */
+arm_lms_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+{anonarm_lms_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;    /**< number of coefficients in the filter. */
+arm_lms_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+{anonarm_lms_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;    /**< number of coefficients in the filter. */
+arm_lms_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+{anonarm_lms_norm_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;     /**< number of coefficients in the filter. */
+arm_lms_norm_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+{anonarm_lms_norm_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;     /**< number of coefficients in the filter. */
+arm_lms_norm_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+{anonarm_lms_norm_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;     /**< Number of coefficients in the filter. */
+arm_lms_norm_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+{anonarm_fir_sparse_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;             /**< number of coefficients in the filter. */
+{anonarm_fir_sparse_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t stateIndex;          /**< state buffer index.  Points to the oldest sample in the state buffer. */
+{anonarm_fir_sparse_instance_f32} in arm_math.h (hardwareLib\cmsis) :     uint16_t maxDelay;            /**< maximum offset specified by the pTapDelay array. */
+{anonarm_fir_sparse_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;             /**< number of coefficients in the filter. */
+{anonarm_fir_sparse_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t stateIndex;          /**< state buffer index.  Points to the oldest sample in the state buffer. */
+{anonarm_fir_sparse_instance_q31} in arm_math.h (hardwareLib\cmsis) :     uint16_t maxDelay;            /**< maximum offset specified by the pTapDelay array. */
+{anonarm_fir_sparse_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;             /**< number of coefficients in the filter. */
+{anonarm_fir_sparse_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t stateIndex;          /**< state buffer index.  Points to the oldest sample in the state buffer. */
+{anonarm_fir_sparse_instance_q15} in arm_math.h (hardwareLib\cmsis) :     uint16_t maxDelay;            /**< maximum offset specified by the pTapDelay array. */
+{anonarm_fir_sparse_instance_q7} in arm_math.h (hardwareLib\cmsis) :     uint16_t numTaps;             /**< number of coefficients in the filter. */
+{anonarm_fir_sparse_instance_q7} in arm_math.h (hardwareLib\cmsis) :     uint16_t stateIndex;          /**< state buffer index.  Points to the oldest sample in the state buffer. */
+{anonarm_fir_sparse_instance_q7} in arm_math.h (hardwareLib\cmsis) :     uint16_t maxDelay;            /**< maximum offset specified by the pTapDelay array. */
+arm_fir_sparse_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_sparse_init_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t maxDelay,
+arm_fir_sparse_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_sparse_init_q31 in arm_math.h (hardwareLib\cmsis) :   uint16_t maxDelay,
+arm_fir_sparse_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_sparse_init_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t maxDelay,
+arm_fir_sparse_init_q7 in arm_math.h (hardwareLib\cmsis) :   uint16_t numTaps,
+arm_fir_sparse_init_q7 in arm_math.h (hardwareLib\cmsis) :   uint16_t maxDelay,
+arm_circularWrite_f32 in arm_math.h (hardwareLib\cmsis) :   uint16_t * writeOffset,
+arm_circularWrite_f32 in arm_math.h (hardwareLib\cmsis) :     *writeOffset = (uint16_t)wOffset;
+arm_circularWrite_q15 in arm_math.h (hardwareLib\cmsis) :   uint16_t * writeOffset,
+arm_circularWrite_q15 in arm_math.h (hardwareLib\cmsis) :     *writeOffset = (uint16_t)wOffset;
+arm_circularWrite_q7 in arm_math.h (hardwareLib\cmsis) :   uint16_t * writeOffset,
+arm_circularWrite_q7 in arm_math.h (hardwareLib\cmsis) :     *writeOffset = (uint16_t)wOffset;
+arm_math.h (hardwareLib\cmsis) line 6768 :    *     uint16_t numRows;
+arm_math.h (hardwareLib\cmsis) line 6769 :    *     uint16_t numCols;
+cmsis_armcc.h (hardwareLib\cmsis) line 547 :   \return        value of type uint16_t at (*ptr)
+cmsis_armcc.h (hardwareLib\cmsis) line 550 :   #define __LDREXH(ptr)                                                        ((uint16_t) __ldrex(ptr))
+cmsis_armcc.h (hardwareLib\cmsis) line 552 :   #define __LDREXH(ptr)          _Pragma("push") _Pragma("diag_suppress 3731") ((uint16_t) __ldrex(ptr))  _Pragma("pop")
+cmsis_armcc.h (hardwareLib\cmsis) line 670 :   \return        value of type uint16_t at (*ptr)
+cmsis_armcc.h (hardwareLib\cmsis) line 672 : #define __LDRHT(ptr)                      ((uint16_t)  __ldrt(ptr))
+cmsis_armclang.h (hardwareLib\cmsis) line 850 :   \return        value of type uint16_t at (*ptr)
+cmsis_armclang.h (hardwareLib\cmsis) line 852 : #define __LDREXH        (uint16_t)__builtin_arm_ldrex
+cmsis_armclang.h (hardwareLib\cmsis) line 967 :   \return        value of type uint16_t at (*ptr)
+cmsis_armclang.h (hardwareLib\cmsis) line 969 : __attribute__((always_inline)) __STATIC_INLINE uint16_t __LDRHT(volatile uint16_t *ptr)
+__LDRHT in cmsis_armclang.h (hardwareLib\cmsis) :   return ((uint16_t) result);    /* Add explicit type cast here */
+cmsis_armclang.h (hardwareLib\cmsis) line 1011 : __attribute__((always_inline)) __STATIC_INLINE void __STRHT(uint16_t value, volatile uint16_t *ptr)
+cmsis_armclang.h (hardwareLib\cmsis) line 1054 :   \return        value of type uint16_t at (*ptr)
+cmsis_armclang.h (hardwareLib\cmsis) line 1056 : __attribute__((always_inline)) __STATIC_INLINE uint16_t __LDAH(volatile uint16_t *ptr)
+__LDAH in cmsis_armclang.h (hardwareLib\cmsis) :   return ((uint16_t) result);
+cmsis_armclang.h (hardwareLib\cmsis) line 1098 : __attribute__((always_inline)) __STATIC_INLINE void __STLH(uint16_t value, volatile uint16_t *ptr)
+cmsis_armclang.h (hardwareLib\cmsis) line 1129 :   \return        value of type uint16_t at (*ptr)
+cmsis_armclang.h (hardwareLib\cmsis) line 1131 : #define     __LDAEXH                 (uint16_t)__builtin_arm_ldaex
+cmsis_gcc.h (hardwareLib\cmsis) line 913 :   \return        value of type uint16_t at (*ptr)
+cmsis_gcc.h (hardwareLib\cmsis) line 915 : __attribute__((always_inline)) __STATIC_INLINE uint16_t __LDREXH(volatile uint16_t *addr)
+__LDREXH in cmsis_gcc.h (hardwareLib\cmsis) :    return ((uint16_t) result);    /* Add explicit type cast here */
+cmsis_gcc.h (hardwareLib\cmsis) line 971 : __attribute__((always_inline)) __STATIC_INLINE uint32_t __STREXH(uint16_t value, volatile uint16_t *addr)
+cmsis_gcc.h (hardwareLib\cmsis) line 1087 :   \return        value of type uint16_t at (*ptr)
+cmsis_gcc.h (hardwareLib\cmsis) line 1089 : __attribute__((always_inline)) __STATIC_INLINE uint16_t __LDRHT(volatile uint16_t *ptr)
+__LDRHT in cmsis_gcc.h (hardwareLib\cmsis) :    return ((uint16_t) result);    /* Add explicit type cast here */
+cmsis_gcc.h (hardwareLib\cmsis) line 1138 : __attribute__((always_inline)) __STATIC_INLINE void __STRHT(uint16_t value, volatile uint16_t *ptr)
+cmsis_gcc.h (hardwareLib\cmsis) line 1181 :   \return        value of type uint16_t at (*ptr)
+cmsis_gcc.h (hardwareLib\cmsis) line 1183 : __attribute__((always_inline)) __STATIC_INLINE uint16_t __LDAH(volatile uint16_t *ptr)
+__LDAH in cmsis_gcc.h (hardwareLib\cmsis) :    return ((uint16_t) result);
+cmsis_gcc.h (hardwareLib\cmsis) line 1225 : __attribute__((always_inline)) __STATIC_INLINE void __STLH(uint16_t value, volatile uint16_t *ptr)
+cmsis_gcc.h (hardwareLib\cmsis) line 1262 :   \return        value of type uint16_t at (*ptr)
+cmsis_gcc.h (hardwareLib\cmsis) line 1264 : __attribute__((always_inline)) __STATIC_INLINE uint16_t __LDAEXH(volatile uint16_t *ptr)
+__LDAEXH in cmsis_gcc.h (hardwareLib\cmsis) :    return ((uint16_t) result);
+cmsis_gcc.h (hardwareLib\cmsis) line 1313 : __attribute__((always_inline)) __STATIC_INLINE uint32_t __STLEXH(uint16_t value, volatile uint16_t *ptr)
+common.h (applib\inc) line 23 : 	#define	u16	uint16_t
+common.h (applib\inc) line 27 : 	#define	vu16 volatile uint16_t
+{anonITM_Type} in core_armv8mml.h (hardwareLib\cmsis) :     __OM  uint16_t   u16;                /*!< Offset: 0x000 ( /W)  ITM Stimulus Port 16-bit */
+{anonITM_Type} in core_cm3.h (hardwareLib\cmsis) :     __OM  uint16_t   u16;                /*!< Offset: 0x000 ( /W)  ITM Stimulus Port 16-bit */
+{anonITM_Type} in core_cm33.h (hardwareLib\cmsis) :     __OM  uint16_t   u16;                /*!< Offset: 0x000 ( /W)  ITM Stimulus Port 16-bit */
+{anonITM_Type} in core_cm4.h (hardwareLib\cmsis) :     __OM  uint16_t   u16;                /*!< Offset: 0x000 ( /W)  ITM Stimulus Port 16-bit */
+{anonITM_Type} in core_cm7.h (hardwareLib\cmsis) :     __OM  uint16_t   u16;                /*!< Offset: 0x000 ( /W)  ITM Stimulus Port 16-bit */
+{anonITM_Type} in core_sc300.h (hardwareLib\cmsis) :     __OM  uint16_t   u16;                /*!< Offset: 0x000 ( /W)  ITM Stimulus Port 16-bit */
+gpio.h (hardwareLib\peripheral\inc) line 43 : #define GPIO_PIN_0                 ((uint16_t)0x0001)  /* Pin 0 selected    */
+gpio.h (hardwareLib\peripheral\inc) line 44 : #define GPIO_PIN_1                 ((uint16_t)0x0002)  /* Pin 1 selected    */
+gpio.h (hardwareLib\peripheral\inc) line 45 : #define GPIO_PIN_2                 ((uint16_t)0x0004)  /* Pin 2 selected    */
+gpio.h (hardwareLib\peripheral\inc) line 46 : #define GPIO_PIN_3                 ((uint16_t)0x0008)  /* Pin 3 selected    */
+gpio.h (hardwareLib\peripheral\inc) line 47 : #define GPIO_PIN_4                 ((uint16_t)0x0010)  /* Pin 4 selected    */
+gpio.h (hardwareLib\peripheral\inc) line 48 : #define GPIO_PIN_5                 ((uint16_t)0x0020)  /* Pin 5 selected    */
+gpio.h (hardwareLib\peripheral\inc) line 49 : #define GPIO_PIN_6                 ((uint16_t)0x0040)  /* Pin 6 selected    */
+gpio.h (hardwareLib\peripheral\inc) line 50 : #define GPIO_PIN_7                 ((uint16_t)0x0080)  /* Pin 7 selected    */
+gpio.h (hardwareLib\peripheral\inc) line 51 : #define GPIO_PIN_8                 ((uint16_t)0x0100)  /* Pin 8 selected    */
+gpio.h (hardwareLib\peripheral\inc) line 52 : #define GPIO_PIN_9                 ((uint16_t)0x0200)  /* Pin 9 selected    */
+gpio.h (hardwareLib\peripheral\inc) line 53 : #define GPIO_PIN_10                ((uint16_t)0x0400)  /* Pin 10 selected   */
+gpio.h (hardwareLib\peripheral\inc) line 54 : #define GPIO_PIN_11                ((uint16_t)0x0800)  /* Pin 11 selected   */
+gpio.h (hardwareLib\peripheral\inc) line 55 : #define GPIO_PIN_12                ((uint16_t)0x1000)  /* Pin 12 selected   */
+gpio.h (hardwareLib\peripheral\inc) line 56 : #define GPIO_PIN_13                ((uint16_t)0x2000)  /* Pin 13 selected   */
+gpio.h (hardwareLib\peripheral\inc) line 57 : #define GPIO_PIN_14                ((uint16_t)0x4000)  /* Pin 14 selected   */
+gpio.h (hardwareLib\peripheral\inc) line 58 : #define GPIO_PIN_15                ((uint16_t)0x8000)  /* Pin 15 selected   */
+gpio.h (hardwareLib\peripheral\inc) line 59 : #define GPIO_PIN_All               ((uint16_t)0xFFFF)  /* All pins selected */
+{anonCRC_TypeDef} in stm32f401xc.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f401xe.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f405xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f407xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f410cx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f410rx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f410tx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f411xe.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f412cx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f412rx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f412vx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f412zx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f413xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f415xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f417xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f423xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f427xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f429xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f437xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f439xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f446xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonSPDIFRX_TypeDef} in stm32f446xx.h (hardwareLib\device\register) :   __IO uint16_t   IMR;          /*!< Interrupt mask register,            Address offset: 0x04 */
+{anonSPDIFRX_TypeDef} in stm32f446xx.h (hardwareLib\device\register) :   uint16_t        RESERVED0;    /*!< Reserved,  0x06                                          */
+{anonSPDIFRX_TypeDef} in stm32f446xx.h (hardwareLib\device\register) :   __IO uint16_t   IFCR;         /*!< Interrupt Flag Clear register,      Address offset: 0x0C */
+{anonSPDIFRX_TypeDef} in stm32f446xx.h (hardwareLib\device\register) :   uint16_t        RESERVED1;    /*!< Reserved,  0x0E                                          */
+{anonSPDIFRX_TypeDef} in stm32f446xx.h (hardwareLib\device\register) :   uint16_t        RESERVED2;    /*!< Reserved,  0x1A                                          */
+{anonCRC_TypeDef} in stm32f469xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */
+{anonCRC_TypeDef} in stm32f479xx.h (hardwareLib\device\register) :   uint16_t      RESERVED1;  /*!< Reserved, 0x06                                      */

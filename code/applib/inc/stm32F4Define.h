@@ -10,6 +10,7 @@
 #include "math.h"
 #include "string.h"
 #include "time.h"
+#include <assert.h>
 
 //hard head
 #include "usart.h"
@@ -18,7 +19,7 @@
 
 
 //funCode head
-
+#include "usartCommom.h"
 
 //test
 #include "main_test.h"

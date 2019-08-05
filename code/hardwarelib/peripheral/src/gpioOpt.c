@@ -4,58 +4,68 @@
 
 
 
-RpyStatus initGpioOpt(enumGPIO defGPIO,u8 pin_index,u16 pin_cfg)
+RpyStatus initGpioOpt(enumGPIO defGPIO,u16 pin_index,u16 pin_cfg)
 {
-	if(pin_index > 15 ||  defGPIO > GPI)
-	{
-		return False;
-	}
+
 	//init gpio 
-	GPIO_Init(GET_GPIO_OBJ(defGPIO),pin_index,pin_cfg);
+	assert(defGPIO <= GPI);
+	for(u8 i = 0 ; i < 16; i ++)
+	{
+		if(pin_index & (0x0001 << i))			
+		{
+			GPIO_Init(GET_GPIO_OBJ(defGPIO),i,pin_cfg);
+		}		
+	}
 	return True;
 }
 
-RpyStatus writeGpioOpt(enumGPIO defGPIO,u8 pin_index,u8 data)
+RpyStatus writeGpioOpt(enumGPIO defGPIO,u16 pin_index,u8 data)
 {
-	if(pin_index > 15 || defGPIO > GPI )
+	assert(defGPIO <= GPI);
+
+	for(u8 i = 0 ; i < 16; i ++)
 	{
-		return False;
+		if(pin_index & (0x0001 << i))			
+		{
+			GPIO_WriteBit(GET_GPIO_OBJ(defGPIO),i,data);
+		}		
 	}
-	GPIO_WriteBit(GET_GPIO_OBJ(defGPIO),pin_index,data);
+	
 	return True;
 }
 
-RpyStatus readGpioOpt(enumGPIO defGPIO,u8 pin_index,u8 *data)
+RpyStatus readGpioOpt(enumGPIO defGPIO,u16 pin_index,u8 *data)
 {
-	if(pin_index > 15 || defGPIO > GPI || data == NULL)
-	{
-		return False;
-	}
+	assert(defGPIO <= GPI);
+	assert(pin_index > 15);
 	*data = GPIO_ReadBit(GET_GPIO_OBJ(defGPIO),pin_index);
 	return True;
 }
 
-RpyStatus ToggleGpioOpt(enumGPIO defGPIO,u8 pin_index,u8 *status)
+RpyStatus ToggleGpioOpt(enumGPIO defGPIO,u16 pin_index)
 {
-	if(pin_index > 15 || defGPIO > GPI )
+	assert(defGPIO <= GPI);
+	for(u8 i = 0 ; i < 16; i ++)
 	{
-		return False;
-	}
-	GPIO_ToggleBit(GET_GPIO_OBJ(defGPIO),pin_index);
-	if(status != NULL)
-	{
-		*status = GPIO_ReadBit(GET_GPIO_OBJ(defGPIO),pin_index);
+		if(pin_index & (0x0001 << i))			
+		{
+			GPIO_ToggleBit(GET_GPIO_OBJ(defGPIO),i);
+		}		
 	}
 	return True;
 }
 
-RpyStatus setGpioOpt(enumGPIO defGPIO,u8 pin_index,u8 mode)
+RpyStatus setGpioOpt(enumGPIO defGPIO,u16 pin_index,u16 pin_cfg)
 {
-	return True;
+	assert(defGPIO <= GPI);
+	for(u8 i = 0 ; i < 16; i ++)
+	{
+		if(pin_index & (0x0001 << i))			
+		{
+			GPIO_Init(GET_GPIO_OBJ(defGPIO),i,pin_cfg);
+		}		
+	}
 }
-
-
-
 
 
 
