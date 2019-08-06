@@ -35,14 +35,16 @@ int32_t getFifoIndex(void)
 *return:
 *info:
 ***********************************/
-int32_t createFifoRev(enumUsart uart , usartRevFunc revDataFunc,u8 revMode)
+int32_t createFifoRev(enumUsart uart , u32 brud,usartRevFunc revDataFunc,u8 revMode)
 {	
 
 
 	int32_t fifoIndex = getFifoIndex();
 	assert(fifoIndex != -1);
 
-	sg_uartRevFifoBuff[fifoIndex].uart = uart;
+	sg_uartRevFifoBuff[fifoIndex].uart = sg_UsartBuff[uart];
+	sg_uartRevFifoBuff[fifoIndex].uartNum = uart;
+	sg_uartRevFifoBuff[fifoIndex].brud= brud;
 	sg_uartRevFifoBuff[fifoIndex].revFunc = revDataFunc;
 	sg_uartRevFifoBuff[fifoIndex].revCmd = revMode;	
 	switch(revMode)
@@ -52,9 +54,7 @@ int32_t createFifoRev(enumUsart uart , usartRevFunc revDataFunc,u8 revMode)
 			break;
 		case UART_REV_INT:
 			setUartIntRev(sg_uartRevFifoBuff + fifoIndex);	
-			break;
-		case UART_REV_POLL:
-			break;			
+			break;		
 	}
 	return fifoIndex;
 }
@@ -86,10 +86,13 @@ void sendBuffFifo(int32_t index , uint8_t *buff,int32_t len,int32_t sendMode)
 	sg_uartRevFifoBuff[index].sendLen = len;
 	if(sendMode == UART_SEND_IO)
 	{
+		usart_devOpt.write(sg_uartRevFifoBuff[index].uartNum,buff,len);
 		//HAL_UART_Transmit(sg_uartRevFifoBuff[index].uart,sg_uartRevFifoBuff[index].sendBuff,sg_uartRevFifoBuff[index].sendLen,0x05);
 	}
 	else if(sendMode == UART_SEND_ANSY)
 	{
+		//send data for ansy
+		
 		//HAL_UART_Transmit_DMA(sg_stufifoList.uart,sg_sendbuff,sg_stufifoList.count));
 		//HAL_UART_Transmit_IT(sg_uartRevFifoBuff[index].uart,sg_uartRevFifoBuff[index].sendBuff,sg_uartRevFifoBuff[index].sendLen);
 	}
@@ -103,16 +106,21 @@ void sendBuffFifo(int32_t index , uint8_t *buff,int32_t len,int32_t sendMode)
 ***********************************/
 void UsartReceive_IDLE(UART_HandleTypeDef *huart)
 {
-	stuUartRevFifo *revinfo;
-	for(int32_t i = 0 ; i < USTCOUNT ; i ++)
-	{
-		if(huart == sg_uartRevFifoBuff[i].uart && sg_uartRevFifoBuff[i].revCmd == UART_REV_DMA)
-		{
-			// is you 
-			 revinfo = &(sg_uartRevFifoBuff[i]);
-		}
-	}	
-	uint32_t temp = 0;
+
+	//rev data for dma idle
+
+
+	
+//	stuUartRevFifo *revinfo;
+//	for(int32_t i = 0 ; i < USTCOUNT ; i ++)
+//	{
+//		if(huart == sg_uartRevFifoBuff[i].uart && sg_uartRevFifoBuff[i].revCmd == UART_REV_DMA)
+//		{
+//			// is you 
+//			 revinfo = &(sg_uartRevFifoBuff[i]);
+//		}
+//	}	
+//	uint32_t temp = 0;
 //	if((__HAL_UART_GET_FLAG(revinfo->uart,UART_FLAG_IDLE) != RESET))
 //	{ 
 //		__HAL_UART_CLEAR_IDLEFLAG(revinfo->uart);
@@ -135,6 +143,8 @@ void UsartReceive_IDLE(UART_HandleTypeDef *huart)
 ***********************************/
 static void setUartIntRev(stuUartRevFifo *revinfo)
 {
+	//set usart int rev 
+	usart_devOpt.open(revinfo->uartNum,revinfo->brud,revinfo->revCmd);
 //	HAL_UART_Receive_IT(revinfo->uart,revinfo->revBuff,1);
 //	__HAL_UART_ENABLE_IT(revinfo->uart, UART_IT_RXNE);
 }
@@ -147,6 +157,8 @@ static void setUartIntRev(stuUartRevFifo *revinfo)
 ***********************************/
 static void setUartDmaIdleRev(stuUartRevFifo *revinfo)
 {
+	//set dma idle
+	usart_devOpt.open(revinfo->uartNum,revinfo->brud,revinfo->revCmd);
 //	HAL_UART_Receive_DMA(revinfo->uart,revinfo->revBuff, ZQ_UARTINFO_SIZE);
 //	__HAL_UART_ENABLE_IT(revinfo->uart, UART_IT_IDLE);
 }
@@ -157,37 +169,10 @@ static void setUartDmaIdleRev(stuUartRevFifo *revinfo)
 //*return:
 //*info:
 //***********************************/
-//void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-//{
-//	for(int32_t i = 0 ; i < ZQ_UARTINFO_COUNT ; i ++)
-//	{
-//		if(huart == sg_uartRevFifoBuff[i].uart && sg_uartRevFifoBuff[i].revCmd == UART_REV_INT)
-//		{
-//			// is you 
-//			sg_uartRevFifoBuff[i].revFunc(sg_uartRevFifoBuff[i].revBuff,1);
-//			HAL_UART_Receive_IT(sg_uartRevFifoBuff[i].uart,sg_uartRevFifoBuff[i].revBuff,1);
-//		}		
-//	}
-//
-//}
-///***********************************
-//*func:
-//*parm:
-//*return:
-//*info:
-//***********************************/
-//void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
-//{
-//	for(int32_t i = 0 ; i < ZQ_UARTINFO_COUNT ; i ++)
-//	{
-//		if(huart == sg_uartRevFifoBuff[i].uart && sg_uartRevFifoBuff[i].revCmd == UART_REV_INT)
-//		{
-//			// is you  had error
-//			//sg_uartRevFifoBuff[i].revFunc(sg_uartRevFifoBuff[i].revBuff[0],1);
-//		}
-//		//HAL_UART_Receive_IT(sg_uartRevFifoBuff[i].uart,sg_uartRevFifoBuff[i].revBuff,1);
-//	}
-//
-//}
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	//rev data
+	
+}
 
 

@@ -1,7 +1,6 @@
 #include "stm32F4Define.h"
 #include "usartRegister.h"
 #include "usartOpt.h"
-static USART_TypeDef* (sg_UsartBuff[]) = {USART1,USART2,USART3,UART4,UART5,USART6}; 
 
 RpyStatus initUsartOpt(enumUsart defUSART,u32 baud)
 {

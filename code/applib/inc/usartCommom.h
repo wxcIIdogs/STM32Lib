@@ -24,8 +24,11 @@ typedef void (*usartRevFunc)(u8 *buff,u32 len);
 
 typedef struct uartrevfifo
 {
-	enumUsart uart;
+	USART_TypeDef uart;
+	enumUsart uartNum;
+	u32 brud;
 	usartRevFunc revFunc;
+	
 	uint8_t revBuff[UARTINFO_SIZE];
 	uint8_t sendBuff[UARTINFO_SEND_SIZE];	
 	uint8_t sendLen;
