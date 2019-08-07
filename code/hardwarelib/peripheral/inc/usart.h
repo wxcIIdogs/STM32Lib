@@ -36,7 +36,14 @@ typedef struct// ops
 	RpyStatus (*release)(enumUsart defUSART);
 }usart_Operation;//STMOperations
 
+
+
+
 extern usart_Operation 	usart_devOpt;
+
+
+
+extern RpyStatus 	usartDMAConfig(enumUsart defUSART,u8 *dmaRevBuff,u32 damRevLen);
 
 //void USART_Init(USART_TypeDef* usart,u32 baud);
 //void USART_InterruptEnable(USART_TypeDef* usart,enumUSART_ISR_Source usart_isr_source);

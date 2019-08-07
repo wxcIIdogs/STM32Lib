@@ -24,7 +24,7 @@ typedef void (*usartRevFunc)(u8 *buff,u32 len);
 
 typedef struct uartrevfifo
 {
-	USART_TypeDef uart;
+	USART_TypeDef *uart;
 	enumUsart uartNum;
 	u32 brud;
 	usartRevFunc revFunc;
@@ -39,14 +39,13 @@ typedef struct uartrevfifo
 
 
 /********************begin func *****************************************/
-extern int32_t 		createFifoRev(enumUsart uart , revFunc revDataFunc,uint32_t revMode);
+extern int32_t  	createFifoRev(enumUsart uart , u32 brud,usartRevFunc revFuncParm,u8 revMode);
 
 extern void 		delFifoRev(int32_t index);
 
 extern void 		sendBuffFifo(int32_t index , uint8_t *buff,int32_t len,int32_t sendMode);
 
-extern void 		UsartReceive_IDLE(UART_HandleTypeDef *huart);
-
+extern void 		UsartReceive_IDLE(USART_TypeDef *huart);
 
 
 

@@ -1,5 +1,5 @@
 #include "stm32F4Define.h"
-
+#include "dmaOpt.h"
 
 
 
@@ -35,9 +35,8 @@ int32_t getFifoIndex(void)
 *return:
 *info:
 ***********************************/
-int32_t createFifoRev(enumUsart uart , u32 brud,usartRevFunc revDataFunc,u8 revMode)
+int32_t createFifoRev(enumUsart uart , u32 brud,usartRevFunc revFuncParm,u8 revMode)
 {	
-
 
 	int32_t fifoIndex = getFifoIndex();
 	assert(fifoIndex != -1);
@@ -45,7 +44,7 @@ int32_t createFifoRev(enumUsart uart , u32 brud,usartRevFunc revDataFunc,u8 revM
 	sg_uartRevFifoBuff[fifoIndex].uart = sg_UsartBuff[uart];
 	sg_uartRevFifoBuff[fifoIndex].uartNum = uart;
 	sg_uartRevFifoBuff[fifoIndex].brud= brud;
-	sg_uartRevFifoBuff[fifoIndex].revFunc = revDataFunc;
+	sg_uartRevFifoBuff[fifoIndex].revFunc = revFuncParm;
 	sg_uartRevFifoBuff[fifoIndex].revCmd = revMode;	
 	switch(revMode)
 	{
@@ -104,35 +103,24 @@ void sendBuffFifo(int32_t index , uint8_t *buff,int32_t len,int32_t sendMode)
 *return:
 *info:
 ***********************************/
-void UsartReceive_IDLE(UART_HandleTypeDef *huart)
+void USART_IDLE_Handler(USART_TypeDef *huart)
 {
 
 	//rev data for dma idle
-
-
-	
-//	stuUartRevFifo *revinfo;
-//	for(int32_t i = 0 ; i < USTCOUNT ; i ++)
-//	{
-//		if(huart == sg_uartRevFifoBuff[i].uart && sg_uartRevFifoBuff[i].revCmd == UART_REV_DMA)
-//		{
-//			// is you 
-//			 revinfo = &(sg_uartRevFifoBuff[i]);
-//		}
-//	}	
-//	uint32_t temp = 0;
-//	if((__HAL_UART_GET_FLAG(revinfo->uart,UART_FLAG_IDLE) != RESET))
-//	{ 
-//		__HAL_UART_CLEAR_IDLEFLAG(revinfo->uart);
-//		HAL_UART_DMAStop(revinfo->uart);
-//		temp = revinfo->uart->hdmarx->Instance->NDTR;
-//		//rev data count
-//		if(revinfo->revFunc != NULL)
-//		{
-//			revinfo->revFunc(revinfo->revBuff,ZQ_UARTINFO_SIZE - temp);
-//		}
-//		HAL_UART_Receive_DMA(revinfo->uart,revinfo->revBuff,ZQ_UARTINFO_SIZE);
-//	}
+	stuUartRevFifo *revinfo;
+	for(int32_t i = 0 ; i < USTCOUNT ; i ++)
+	{
+		if(huart == sg_uartRevFifoBuff[i].uart && sg_uartRevFifoBuff[i].revCmd == UART_REV_DMA)
+		{
+			// is you 
+			 revinfo = &(sg_uartRevFifoBuff[i]);
+		}
+	}	
+	DMA_USART_Stop(revinfo->uart);
+	u16 temp = UARTINFO_SIZE - DMA_USART_GetRemain(revinfo->uart);
+	revinfo->revFunc(revinfo->revBuff,temp);
+	memset(revinfo->revBuff,0,UARTINFO_SIZE);
+	usartDMAConfig(revinfo->uartNum,revinfo->revBuff ,UARTINFO_SIZE);
 }
 
 /***********************************
@@ -159,8 +147,7 @@ static void setUartDmaIdleRev(stuUartRevFifo *revinfo)
 {
 	//set dma idle
 	usart_devOpt.open(revinfo->uartNum,revinfo->brud,revinfo->revCmd);
-//	HAL_UART_Receive_DMA(revinfo->uart,revinfo->revBuff, ZQ_UARTINFO_SIZE);
-//	__HAL_UART_ENABLE_IT(revinfo->uart, UART_IT_IDLE);
+	usartDMAConfig(revinfo->uartNum,revinfo->revBuff ,UARTINFO_SIZE);
 }
 //
 ///***********************************
@@ -169,7 +156,7 @@ static void setUartDmaIdleRev(stuUartRevFifo *revinfo)
 //*return:
 //*info:
 //***********************************/
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+void USART_RXNE_Handler(USART_TypeDef *huart)
 {
 	//rev data
 	

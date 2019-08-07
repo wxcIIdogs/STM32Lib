@@ -13,7 +13,8 @@ RpyStatus initGpioOpt(enumGPIO defGPIO,u16 pin_index,u16 pin_cfg)
 	{
 		if(pin_index & (0x0001 << i))			
 		{
-			GPIO_Init(GET_GPIO_OBJ(defGPIO),i,pin_cfg);
+			GPIO_Init(GET_GPIO_OBJ(defGPIO),i,pin_cfg);
+
 		}		
 	}
 	return True;
@@ -62,9 +63,11 @@ RpyStatus setGpioOpt(enumGPIO defGPIO,u16 pin_index,u16 pin_cfg)
 	{
 		if(pin_index & (0x0001 << i))			
 		{
-			GPIO_Init(GET_GPIO_OBJ(defGPIO),i,pin_cfg);
+			GPIO_Init(GET_GPIO_OBJ(defGPIO),i,pin_cfg);
+
 		}		
 	}
+	return True;
 }
 
 

@@ -13,5 +13,5 @@ extern RpyStatus 			initGpioOpt(enumGPIO defGPIO,u16 pin_index,u16 pin_cfg);
 extern RpyStatus 			writeGpioOpt(enumGPIO defGPIO,u16 pin_index,u8 data);
 extern RpyStatus 			readGpioOpt(enumGPIO defGPIO,u16 pin_index,u8 *data);
 extern RpyStatus 			ToggleGpioOpt(enumGPIO defGPIO,u16 pin_index);
-extern RpyStatus 			setGpioOpt(enumGPIO defGPIO,u16 pin_index,u8 mode);
+extern RpyStatus 		setGpioOpt(enumGPIO defGPIO,u16 pin_index,u16 pin_cfg);
 #endif

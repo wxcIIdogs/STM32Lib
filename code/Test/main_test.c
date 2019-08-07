@@ -13,34 +13,28 @@ void delay(u32 ms)
 	}
 }
 
-
-void USART1_TXE_Handler(void)
+static u32 sg_Usart1Index = 0;
+void usart1RevFunc(u8 *buff,u32 len)
 {
-	
-}
-void USART1_RXNE_Handler(void)
-{
-	//u8 value = USART_ReadByte(USART1);
-//	if((value >= 97) && (value <= 122))	//大写字母转小写
-//	{
-//		value -= 32;
-//	}
-//	USART_WriteByte(USART1,value);
-}
-void USART1_TC_Handler(void)
-{
-	
-}
-void USART1_IDLE_Handler(void)
-{
-	
+	//sendBuffFifo(sg_Usart1Index,buff,len,UART_SEND_IO);
+	if(len != 100)
+		printf("error:%s,len = %d\r\n",buff,len);
+	static u32 sum = 0;
+	sum += len;
+	if(strcmp((char *)buff,"reset") == 0)
+	{
+		sum = 0;
+		printf("reset:sum = %d\r\n",sum);
+	}
+	else		
+	//sendBuffFifo(sg_Usart1Index,buff,len,UART_SEND_IO);
+		printf("sum = %d\r\n",sum);
 }
 
 void initDev_test()
 {
+	sg_Usart1Index = createFifoRev(UST1, 115200, usart1RevFunc, UART_REV_DMA);
 	gpio_devOpt.open(GPE,GPIO_PIN_11,PIN_MODE_OUT);
-	
-	usart_devOpt.open(UST1,115200,m_usart_dma);
 }
 
 void loop_test()

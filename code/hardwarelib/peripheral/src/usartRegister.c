@@ -116,20 +116,36 @@ void USART1_IRQHandler(void)
 {
 	if((USART1->SR & USART_SR_TXE) && (USART1->CR1 & USART_CR1_TXEIE))
 	{
-		USART1_TXE_Handler();
+		USART_TXE_Handler(USART1);
 	}
 	if((USART1->SR & USART_SR_RXNE) && (USART1->CR1 & USART_CR1_RXNEIE))
 	{
-		USART1_RXNE_Handler();
+		USART_RXNE_Handler(USART1);
 	}
 	if((USART1->SR & USART_SR_TC) && (USART1->CR1 & USART_CR1_TCIE))
 	{
-		USART1_TC_Handler();
+		USART_TC_Handler(USART1);
 	}
 	if((USART1->SR & USART_SR_IDLE) && (USART1->CR1 & USART_CR1_IDLEIE))
 	{
-		USART1_IDLE_Handler();
+		USART_IDLE_Handler(USART1);
+		USART_ReadByte(USART1);
 	}
 }
-
+__weak void USART_TXE_Handler(USART_TypeDef* uart)
+{
+	
+}
+__weak void USART_RXNE_Handler(USART_TypeDef* uart)
+{
+	
+}
+__weak void USART_TC_Handler(USART_TypeDef* uart)
+{
+	
+}
+__weak void USART_IDLE_Handler(USART_TypeDef* uart)
+{
+	
+}
 

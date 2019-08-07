@@ -335,9 +335,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F407xx,VERSIONV1_0</Define>
+              <Define>STM32F407xx,NDEBUG,VERSIONV1_0</Define>
               <Undefine></Undefine>
-              <IncludePath>..\user;..\applib\inc;..\hardwareLib\peripheral\inc;..\hardwarelib\cmsis;..\Test</IncludePath>
+              <IncludePath>..\user;..\applib\inc;..\hardwareLib\peripheral\inc;..\hardwarelib\cmsis;..\Test;..\user\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -396,6 +396,11 @@
               <FileType>1</FileType>
               <FilePath>..\applib\src\base_com.c</FilePath>
             </File>
+            <File>
+              <FileName>usartCommom.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\applib\src\usartCommom.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -426,6 +431,11 @@
               <FileType>2</FileType>
               <FilePath>..\hardwarelib\device\startup\startup_stm32f407xx.s</FilePath>
             </File>
+            <File>
+              <FileName>stm32_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\user\stm32_it.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -450,6 +460,11 @@
               <FileName>gpioOpt.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\hardwareLib\peripheral\src\gpioOpt.c</FilePath>
+            </File>
+            <File>
+              <FileName>dmaOpt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\hardwareLib\peripheral\src\dmaOpt.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -16,10 +16,10 @@
 #define	USART_STOP_2BIT			(2<<3)
 #define	USART_STOP_1P5BIT		(3<<3)
 
-extern void 		USART1_TXE_Handler(void);
-extern void 		USART1_RXNE_Handler(void);
-extern void 		USART1_TC_Handler(void);
-extern void 		USART1_IDLE_Handler(void);
+extern void 		USART_TXE_Handler(USART_TypeDef* uart);
+extern void 		USART_RXNE_Handler(USART_TypeDef* uart);
+extern void 		USART_TC_Handler(USART_TypeDef* uart);
+extern void 		USART_IDLE_Handler(USART_TypeDef* uart);
 
 void USART_Init(USART_TypeDef* usart,u32 baud);
 void USART_WriteByte(USART_TypeDef* usart,u8 value);

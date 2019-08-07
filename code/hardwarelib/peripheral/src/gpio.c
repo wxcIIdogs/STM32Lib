@@ -34,11 +34,6 @@ RpyStatus gpioRead(enumGPIO defGPIO,u16 pin_index,u8 *data)
 
 }
 
-RpyStatus gpioRelease(enumGPIO defGPIO,u16 pin_index)
-{
-	gpioIoctl(defGPIO,pin_index,PIN_MODE_AN);
-	return True;
-}
 
 RpyStatus gpioIoctl(enumGPIO defGPIO,u16 pin_index,u16 pin_cfg)
 {
@@ -47,6 +42,12 @@ RpyStatus gpioIoctl(enumGPIO defGPIO,u16 pin_index,u16 pin_cfg)
 	{
 		return False;
 	}
+	return True;
+}
+
+RpyStatus gpioRelease(enumGPIO defGPIO,u16 pin_index)
+{
+	gpioIoctl(defGPIO,pin_index,PIN_MODE_AN);
 	return True;
 }
 
