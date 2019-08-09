@@ -1,7 +1,7 @@
 #ifndef __BASECOM_H__
 #define __BASECOM_H__
 
-#include "stm32f4xx.h"                  // Device header
+#include "stm32F4Define.h"
 
 typedef enum
 {
@@ -31,6 +31,14 @@ typedef struct
 	stuDevNode node;					//StuDevNode
 	uint8_t devName[20];			//DevName
 }deviceBase;								//DeviceBase
+
+
+
+
+
+uint32_t 			stm_getTick(void);
+void 					stm_Delay(uint32_t ms);
+
 
 
 #endif

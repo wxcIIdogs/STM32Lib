@@ -3,6 +3,7 @@
 
 
 //common head
+#include "stm32f4xx.h"                  // Device header
 #include "base_com.h"
 #include "common.h"
 #include "stdio.h"
@@ -11,7 +12,7 @@
 #include "string.h"
 #include "time.h"
 #include <assert.h>
-
+ 
 //hard head
 #include "usart.h"
 #include "gpio.h"
@@ -20,6 +21,8 @@
 
 //funCode head
 #include "usartCommom.h"
+#include "usartAnaly.h"
+#include "usartRevFifo.h"
 
 //test
 #include "main_test.h"
