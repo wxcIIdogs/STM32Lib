@@ -23,6 +23,7 @@
 #include "usartCommom.h"
 #include "usartAnaly.h"
 #include "usartRevFifo.h"
+#include "usartSendFifo.h"
 
 //test
 #include "main_test.h"
